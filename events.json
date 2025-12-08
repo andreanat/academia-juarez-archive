@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Library Renovation 2024",
+    "year": 2024,
+    "date": "May 2024",
+    "thumbnail": "https://picsum.photos/400",
+    "description": "Renovation of the school library."
+  },
+  {
+    "id": 2,
+    "title": "Spirit Week",
+    "year": 2023,
+    "date": "October 2023",
+    "thumbnail": "https://picsum.photos/401",
+    "description": "Theme costumes and fun activities."
+  }
+]
