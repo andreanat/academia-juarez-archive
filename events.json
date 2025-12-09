@@ -4,15 +4,71 @@
     "title": "Library Renovation 2024",
     "year": 2024,
     "date": "May 2024",
-    "thumbnail": "https://picsum.photos/400",
-    "description": "Renovation of the school library."
+    "location": "Main Library",
+    "type": "library",
+    "tags": ["library", "renovation", "campus"],
+    "thumbnail": "https://picsum.photos/seed/library2024/400/250",
+    "description": "The main library was renovated with new shelves, reading areas, and study rooms for students.",
+    "bookQuery": "school library design"
   },
   {
     "id": 2,
-    "title": "Spirit Week",
+    "title": "Spirit Week: Crazy Socks & Twin Day",
     "year": 2023,
     "date": "October 2023",
-    "thumbnail": "https://picsum.photos/401",
-    "description": "Theme costumes and fun activities."
+    "location": "Campus Grounds",
+    "type": "tradition",
+    "tags": ["spirit week", "students", "tradition"],
+    "thumbnail": "https://picsum.photos/seed/spiritweek/400/250",
+    "description": "Students participated in Spirit Week with themed days like Crazy Socks Day and Twin Day to build school spirit.",
+    "bookQuery": "school spirit activities"
+  },
+  {
+    "id": 3,
+    "title": "Graduation Ceremony Class of 2022",
+    "year": 2022,
+    "date": "June 2022",
+    "location": "Auditorium",
+    "type": "graduation",
+    "tags": ["graduation", "seniors", "ceremony"],
+    "thumbnail": "https://picsum.photos/seed/graduation2022/400/250",
+    "description": "The Class of 2022 celebrated their graduation with family and friends in the school auditorium.",
+    "bookQuery": "graduation speeches"
+  },
+  {
+    "id": 4,
+    "title": "Reading Marathon: Freedom Is a Book Away",
+    "year": 2023,
+    "date": "March 2023",
+    "location": "Library and Classrooms",
+    "type": "reading",
+    "tags": ["reading", "literacy", "library"],
+    "thumbnail": "https://picsum.photos/seed/readingmarathon/400/250",
+    "description": "Students participated in a reading marathon challenge to read as many pages as possible during the month.",
+    "bookQuery": "reading challenge young adults"
+  },
+  {
+    "id": 5,
+    "title": "Science Fair and Robotics Exhibition",
+    "year": 2021,
+    "date": "November 2021",
+    "location": "Gymnasium",
+    "type": "academic",
+    "tags": ["science", "robots", "projects"],
+    "thumbnail": "https://picsum.photos/seed/sciencefair/400/250",
+    "description": "Students presented science projects and basic robotics prototypes as part of the annual Science Fair.",
+    "bookQuery": "student robotics projects"
+  },
+  {
+    "id": 6,
+    "title": "Library Book Club: Mystery & Suspense",
+    "year": 2024,
+    "date": "September 2024",
+    "location": "Library Reading Area",
+    "type": "book-club",
+    "tags": ["book club", "mystery", "students"],
+    "thumbnail": "https://picsum.photos/seed/bookclub/400/250",
+    "description": "A monthly book club where students discussed mystery and suspense novels chosen by the librarian.",
+    "bookQuery": "best mystery novels for teens"
   }
 ]
