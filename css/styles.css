@@ -1,45 +1,239 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
 }
 
 header {
-  background: #1F3D2B;
-  color: white;
-  padding: 15px;
+  background: #143b2f;
+  color: #f9fafb;
+  padding: 1.25rem 1rem;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+}
+
+#searchInput {
+  display: block;
+  margin: 1.25rem auto 0;
+  padding: 0.55rem 0.75rem;
+  width: min(480px, 90vw);
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+#searchInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+
+main,
+#event-container {
+  max-width: 1100px;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1rem 2rem;
 }
 
 #event-container {
-  padding: 20px;
   display: grid;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .event-card {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, translate 0.18s ease;
+  animation: fadeInUp 0.35s ease;
 }
+
+.event-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+}
+
+/* Image smaller + consistent */
 .event-card img {
+  display: block;
   width: 100%;
-  border-radius: 6px;
-}
-.details-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  height: 180px;
+  object-fit: cover;
 }
 
-.details-container img {
-  width: 100%;
-  border-radius: 6px;
-  margin: 15px 0;
+/* Card content */
+.event-card h2 {
+  margin: 0.85rem 1rem 0.25rem;
+  font-size: 1.05rem;
+  color: #111827;
 }
 
-.details-container h2 {
-  margin-top: 10px;
-  color: #1F3D2B;
+.event-card p {
+  margin: 0 1rem 0.75rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* Links & buttons area */
+.event-card a {
+  margin: 0 1rem 0.75rem;
+  font-size: 0.85rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.event-card a:hover {
+  text-decoration: underline;
+}
+
+/* Favorite button */
+.event-card .favBtn {
+  margin: 0 1rem 1rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: none;
+  background: #1f3d2b;
+  color: #f9fafb;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background 0.15s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.event-card .favBtn:hover {
+  background: #14513a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 1.15rem;
+  }
+
+  .event-card img {
+    height: 160px;
+  }
+}
+
+.event-detail {
+  max-width: 760px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem 2rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+}
+
+.event-detail img {
+  width: 100%;
+  border-radius: 12px;
+  height: 230px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.event-detail h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.event-meta {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.event-description {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.related-book {
+  margin-top: 1.8rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.related-book h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+.book-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.book-card img {
+  width: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.25);
+}
+
+.book-info h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.98rem;
+}
+
+.book-info p {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.book-info a {
+  font-size: 0.85rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.book-info a:hover {
+  text-decoration: underline;
+}
+
+.book-loading {
+  font-size: 0.9rem;
+  color: #6b7280;
 }
